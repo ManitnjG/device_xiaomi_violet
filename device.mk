@@ -9,9 +9,6 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# MiuiCamera
-$(call inherit-product, vendor/MiuiCamera/config.mk)
-
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
@@ -21,7 +18,7 @@ $(call inherit-product, vendor/xiaomi/violet/violet-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-blaze
+    $(LOCAL_PATH)/overlay-banana
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -278,10 +275,6 @@ PRODUCT_PACKAGES += \
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
-
-# Keyhandler
-PRODUCT_PACKAGES += \
-    KeyHandler
 
 # Keylayouts
 PRODUCT_COPY_FILES += \

@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2018-2020 The LineageOS Project
-# Copyright (C) 2023 The ProjectBlaze Project
+# Copyright (C) 2023 The Bananadroid Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -8,23 +8,24 @@
 # Inherit from violet device
 $(call inherit-product, device/xiaomi/violet/device.mk)
 
-# Inherit some common ProjectBlaze stuff.
-$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
+# Inherit some common Bananadroid stuff.
+$(call inherit-product, vendor/banana/config/common.mk)
 
-# ProjectBlaze specific flags
+# Bananadroid specific flags
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
-BLAZE_BUILD_TYPE := Official
-BLAZE_MAINTAINER := Nalinish
+TARGET_EXCLUDE_MATLOG := true
+TARGET_ENABLE_BLUR := false
+BANANA_MAINTAINER := Nalinish
 WITH_GAPPS := true
-TARGET_GAPPS_ARCH := arm64
+TARGET_BUILD_APERTURE_CAMERA := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := blaze_violet
+PRODUCT_NAME := banana_violet
 PRODUCT_DEVICE := violet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7 Pro
