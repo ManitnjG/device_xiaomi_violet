@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/pixys_violet.mk
+    $(LOCAL_DIR)/lineage_violet.mk
 
 COMMON_LUNCH_CHOICES := \
-    pixys_violet-user \
-    pixys_violet-userdebug \
-    pixys_violet-eng
+    lineage_violet-user \
+    lineage_violet-userdebug \
+    lineage_violet-eng
