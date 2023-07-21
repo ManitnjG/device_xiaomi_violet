@@ -9,7 +9,7 @@
 $(call inherit-product, device/xiaomi/violet/device.mk)
 
 # Inherit some common ProjectBlaze stuff.
-$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # ProjectBlaze specific flags
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -18,12 +18,10 @@ TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
-BLAZE_BUILD_TYPE := Official
-BLAZE_MAINTAINER := Nalinish
-TARGET_GAPPS_ARCH := arm64
+DEVICE_MAINTAINER := ManitnjG
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := blaze_violet
+PRODUCT_NAME := lineage_violet
 PRODUCT_DEVICE := violet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7 Pro
